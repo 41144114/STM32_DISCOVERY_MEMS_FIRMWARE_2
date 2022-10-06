@@ -1,0 +1,49 @@
+16:53:13 **** Incremental Build of configuration Debug for project testProject ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/leds.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/leds.d" -MT"Core/Src/leds.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/leds.o"
+../Core/Src/leds.c: In function 'displayUp':
+../Core/Src/leds.c:49:5: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   49 |  if(abs(ax) < 900 && abs(ay) < 900)//если очень маленькие значения, не обращать на них внимания
+      |     ^~~
+arm-none-eabi-gcc -o "testProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\StmWorkspace\testProject\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="testProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: testProject.elf
+ 
+arm-none-eabi-objdump -h -S  testProject.elf  > "testProject.list"
+arm-none-eabi-objcopy  -O binary  testProject.elf  "testProject.bin"
+arm-none-eabi-size   testProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12100	     20	   1572	  13692	   357c	testProject.elf
+Finished building: default.size.stdout
+Finished building: testProject.bin
+ 
+ 
+Finished building: testProject.list
+ 
+16:57:27 **** Incremental Build of configuration Debug for project testProject ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/leds.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/leds.d" -MT"Core/Src/leds.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/leds.o"
+../Core/Src/leds.c: In function 'displayUp':
+../Core/Src/leds.c:49:5: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+   49 |  if(abs(ax) < 900 && abs(ay) < 900)//если очень маленькие значения, не обращать на них внимания
+      |     ^~~
+arm-none-eabi-gcc -o "testProject.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\StmWorkspace\testProject\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="testProject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: testProject.elf
+ 
+arm-none-eabi-objdump -h -S  testProject.elf  > "testProject.list"
+arm-none-eabi-objcopy  -O binary  testProject.elf  "testProject.bin"
+arm-none-eabi-size   testProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12140	     20	   1572	  13732	   35a4	testProject.elf
+Finished building: default.size.stdout
+ 
+Finished building: testProject.bin
+ 
+Finished building: testProject.list
+ 
+16:58:13 **** Incremental Build of configuration Debug for project testProject ****
+make -j12 all 
+arm-none-eabi-size   testProject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12140	     20	   1572	  13732	   35a4	testProject.elf
+Finished building: default.size.stdout
+ 

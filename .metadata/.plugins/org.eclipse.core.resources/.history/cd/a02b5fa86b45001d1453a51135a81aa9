@@ -1,0 +1,20 @@
+/*
+ * leds.h
+ *
+ *  Created on: 6 окт. 2022 г.
+ *      Author: 4091
+ */
+
+#ifndef INC_LEDS_H_
+#define INC_LEDS_H_
+
+void turnOffLed(int i);
+void OnLed(int i);
+void SwitchLed(int i);
+void displayUp(short ax, short ay);
+void displayLevel(short ax, short ay);
+void displayDown(short ax, short ay);
+void offAllLeds();
+
+
+#endif /* INC_LEDS_H_ */
