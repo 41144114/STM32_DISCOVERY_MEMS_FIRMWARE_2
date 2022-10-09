@@ -24,7 +24,7 @@
 
 #include "main.h"
 #include "stm32f3xx_hal.h"
-#include "USB/usb_device.h"
+#include "usb_device.h"
 
 
 typedef struct packet_t
@@ -143,8 +143,9 @@ int main(void)
 
 //	      displayDown(ax, ay);
 	      displayLevel(ax, ay);
-	      sprintf(buffer, "sync,%d,%d,%d,%d,%d,%d\r\n", buf.Gx, buf.Gy, buf.Gz, ax, ay, az);
-	  		  CDC_Transmit_FS(buffer, strlen(buffer));
+//	      sprintf(buffer, "sync,%d,%d,%d,%d,%d,%d\r\n", buf.Gx, buf.Gy, buf.Gz, ax, ay, az);
+	      sprintf(buffer, "sync,%d,%d,%d\r\n", ax, ay, az);
+	  	  CDC_Transmit_FS(buffer, strlen(buffer));
 
 	  		  //temp = readGyroscopeRegister(0x25);
 	  		  //sprintf(buffer,"%d\r\n",(int)temp);

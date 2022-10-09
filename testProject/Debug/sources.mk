@@ -20,7 +20,8 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/Src/USB \
+Core/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
+Core/Middlewares/ST/STM32_USB_Device_Library/Core/Src \
 Core/Src \
 Core/Startup \
 Drivers/STM32F3xx_HAL_Driver/Src \
